@@ -119,12 +119,5 @@ while len(front)> 0:
         if next in allPoints:
             front.append(next)
 
-for p in notEnclosed:
-    if p in allTruePoints:
-        allTruePoints.remove(p)
 
-for p in cycleSet:
-    if p in allTruePoints:
-        allTruePoints.remove(p)
-
-print("Part 2: ", len(allTruePoints))
+print("Part 2: ", len(allTruePoints - notEnclosed - cycleSet))
